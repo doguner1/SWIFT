@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KullaniciKayitSistemi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adınız" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kZP-ab-oni">
+                                <rect key="frame" x="98" y="76" width="197" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-Xr-7I0">
+                                <rect key="frame" x="98" y="139" width="197" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre Tekrarı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-JY-ReT">
+                                <rect key="frame" x="98" y="203" width="197" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TDt-1w-LVM">
+                                <rect key="frame" x="125" y="291" width="142" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system" title="Kayıt"/>
+                                <connections>
+                                    <action selector="signupClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bES-Ny-Uzi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kZP-ab-oni" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="3Cp-nM-WEG"/>
+                            <constraint firstItem="kZP-ab-oni" firstAttribute="trailing" secondItem="OR5-Xr-7I0" secondAttribute="trailing" id="3Fm-tg-rgE"/>
+                            <constraint firstItem="TDt-1w-LVM" firstAttribute="top" secondItem="qoR-JY-ReT" secondAttribute="bottom" constant="54" id="K6N-bF-NtY"/>
+                            <constraint firstItem="qoR-JY-ReT" firstAttribute="top" secondItem="OR5-Xr-7I0" secondAttribute="bottom" constant="30" id="KCR-2p-NfB"/>
+                            <constraint firstItem="qoR-JY-ReT" firstAttribute="centerX" secondItem="TDt-1w-LVM" secondAttribute="centerX" id="Q5n-Xv-CpB"/>
+                            <constraint firstItem="kZP-ab-oni" firstAttribute="leading" secondItem="OR5-Xr-7I0" secondAttribute="leading" id="SaR-qT-5bJ"/>
+                            <constraint firstItem="OR5-Xr-7I0" firstAttribute="top" secondItem="kZP-ab-oni" secondAttribute="bottom" constant="29" id="elG-Yx-4xz"/>
+                            <constraint firstItem="TDt-1w-LVM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="o1Q-ty-sen"/>
+                            <constraint firstItem="OR5-Xr-7I0" firstAttribute="leading" secondItem="qoR-JY-ReT" secondAttribute="leading" id="qOB-DC-aB7"/>
+                            <constraint firstItem="OR5-Xr-7I0" firstAttribute="trailing" secondItem="qoR-JY-ReT" secondAttribute="trailing" id="r3f-sd-han"/>
+                            <constraint firstItem="kZP-ab-oni" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="uJM-KJ-utD"/>
+                            <constraint firstItem="TDt-1w-LVM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vs9-Oe-y6g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="password2Text" destination="qoR-JY-ReT" id="EB5-OL-elV"/>
+                        <outlet property="passwordText" destination="OR5-Xr-7I0" id="xV5-H1-bPR"/>
+                        <outlet property="usernameText" destination="kZP-ab-oni" id="6qo-7z-B64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
